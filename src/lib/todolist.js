@@ -101,11 +101,12 @@ class TodoList extends HTMLElement {
         child.onclick=this.strikeTodo;
         child.appendChild(document.createTextNode(todo));
         todoElm.appendChild(child);
-        evt.stopPropogation();
+        evt.stopPropagation();
     }
 
     strikeTodo(evt) {
         evt.target.classList.toggle('strikethrough');
+        evt.stopPropagation();
     }
 
     /**
